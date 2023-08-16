@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+    <style>
+      body{
+        background-image: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+        
+       
+        form{
+            color: white;
+            margin: 50px;
+        padding: 10px;
+        width: 400px;
+        background-color: #333;
+        border: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px green;
+
+
+       
+        }
+        h1{text-align: center;}
+
+        #name{
+            background-color: white;
+        }
+       
+        #Lname{
+            margin: 20px;
+          
+            background-color: white;
+        }
+        #state{
+            margin: 20px; 
+
+            background-color: white;
+           ;
+        }
+        #saddress{
+            background-color: white;
+            width: 100%;
+        }
+        #adress{
+            background-color: white;
+            width: 100%;
+        }
+
+        #city{
+            background-color: white;
+        }
+
+        #zip{
+            background-color: white;
+        }
+       
+      
+        #Phone{
+            background-color: white;
+        }
+
+        
+        #email{
+            background-color: white;
+            margin: 20px;
+        }
+        button{
+           
+            background-color: aqua;
+            color: black;
+            display: block;
+            width:30%;
+            margin: 0 auto;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+
+           
+        }
+      #container{
+         border: 5px yellow;
+         
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120vh;
+
+      }
+      #countrySelect{
+        color: black;
+        background-color: white;
+      }
+
+   
+    </style>
+</head>
+<body>
+    <div id="container">
+       
+        <form >
+            <h1> Survey form</h1>
+            <hr>
+            <br>
+            <label for="">Customer Name</label>
+            <br>
+           <input type="text" id="name" placeholder="Enter your first name" />
+            <input type="text" id="Lname" placeholder="Enter your Last name" />
+            <br>
+           <label for="">Address</label>
+            <br>
+            <br>
+            <input type="text" id="saddress" placeholder="Enter your Street adress" />
+            <br>
+             <br>
+            <input type="text" id="adress" placeholder="Enter your Address line 2" />
+            <br>
+            <input type="text" id="city" placeholder="Enter your city name" />
+            <input type="text" id="state" placeholder="Enter your state name" />
+            <br>
+            <input type="text" id="zip" placeholder="Enter Zip code" />
+            <br>
+            <br>
+            <select id="countrySelect">
+                
+            </select>
+        
+            <script>
+                
+                const countries = [
+                    "Afghanistan", "Albania", "Algeria",  "Zimbabwe"
+                ];
+        
+                const selectElement = document.getElementById('countrySelect');
+        
+                
+                countries.forEach(country => {
+                    const option = document.createElement('option');
+                    option.value = country;
+                    option.textContent = country;
+                    selectElement.appendChild(option);
+                });
+            </script>
+            <br>
+            <label for="">select a country</label>
+            <br>
+            <br>
+            <label for="">Contact</label>
+            <br>
+            <input type="text" id="Phone" placeholder="Enter your phone number" />
+            <input type="email" id="email" placeholder="Enter your email" />
+
+            <label for="">Personal details</label>
+            <br>
+            <br>
+            <input type="radio" id="male" name="Gender"/>
+           <label type for="male">Male</label>
+           <br>
+           <input type="radio" id="female" name="Gender"/>
+           <label type for="female">Female</label>
+           <br>
+           <input type="radio" id="others" name="Gender"/>
+           <label type for="others">others</label>
+           <br>
+           <br>
+
+        <label for="">Rating</label>
+        <br>
+        <br>
+           <label for="" >Rating 1 :</label>
+           <input type="radio" id="Bad" name="rating"/>
+           <label type for="Bad">bad</label>
+           <input type="radio" id=" Good" name="rating"/>
+           <label type for="female">Good</label>
+           <input type="radio" id="Excellent" name="rating"/>
+           <label type for="Excellent">Excellent</label>
+            <br>
+           <label for="" >Rating 2 :</label>
+           <input type="radio" id="Bad" name="rating1"/>
+           <label type for="Bad">bad</label>
+           <input type="radio" id=" Good" name="rating1"/>
+           <label type for="female">Good</label>
+           <input type="radio" id="Excellent" name="rating1"/>
+           <label type for="Excellent">Excellent</label>
+           <br>
+           <label for="" >Rating 3 :</label>
+           <input type="radio" id="Bad" name="rating2"/>
+           <label type for="Bad">bad</label>
+           <input type="radio" id=" Good" name="rating2"/>
+           <label type for="female">Good</label>
+           <input type="radio" id="Excellent" name="rating2"/>
+           <label type for="Excellent">Excellent</label>
+           <br>
+           <label for="" >Rating 4 :</label>
+           <input type="radio" id="Bad" name="rating3"/>
+           <label type for="Bad">bad</label>
+           <input type="radio" id=" Good" name="rating3"/>
+           <label type for="female">Good</label>
+           <input type="radio" id="Excellent" name="rating3"/>
+           <label type for="Excellent">Excellent</label>
+           <br>
+           <label for="" >Rating 5 :</label>
+           <input type="radio" id="Bad" name="rating4"/>
+           <label type for="Bad">bad</label>
+           <input type="radio" id=" Good" name="rating4"/>
+           <label type for="female">Good</label>
+           <input type="radio" id="Excellent" name="rating4"/>
+           <label type for="Excellent">Excellent</label>
+           <br>
+           <label for="" >Rating 6 :</label>
+           <input type="radio" id="Bad" name="rating5"/>
+           <label type for="Bad">bad</label>
+           <input type="radio" id=" Good" name="rating5"/>
+           <label type for="female">Good</label>
+           <input type="radio" id="Excellent" name="rating5"/>
+           <label type for="Excellent">Excellent</label>
+           <br>
+           <br>
+           <button type="submit" >submit</button>
+        </form>
+    </div>
+    
+</body>
+</html>
